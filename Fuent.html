@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="misestil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="img/milog.jpeg" alt="Logo" width="60" height="60">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="Index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="IAs.html"><i class="bi bi-info-circle"></i> IAs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Curio.html"><i class="bi bi-question-diamond"></i> Usos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Fuent.html"><i class="bi bi-question-circle"></i> Comentarios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container mt-5 hidden">
+            <h1 class="text-center text-primary mb-4">Encuesta sobre Temas de IA</h1>
+            <form action="php/procesar_encuesta.php" method="POST">
+                <div class="mb-4">
+                    <label for="tema-favorito" class="form-label">¿Cuál de estos temas de IA te interesó más?</label>
+                    <select id="tema-favorito" name="tema-favorito" class="form-select">
+                        <option value="que-es-ia">¿Qué es la IA?</option>
+                        <option value="historia">Historia de la IA</option>
+                        <option value="ia-debil-vs-fuerte">IA Débil vs IA Fuerte</option>
+                        <option value="usos-ia">Usos de la IA</option>
+                        <option value="nos-reemplazara">¿Nos reemplazará la IA?</option>
+                    </select>
+                </div>
+    
+                <!-- Pregunta 2 -->
+                <div class="mb-4">
+                    <label class="form-label">¿Qué tan útil encontraste la información sobre IA?</label>
+                    <div class="form-check">
+                        <input type="radio" id="muy-util" name="utilidad" value="muy-util" class="form-check-input">
+                        <label for="muy-util" class="form-check-label">Muy útil</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="util" name="utilidad" value="util" class="form-check-input">
+                        <label for="util" class="form-check-label">Útil</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="poco-util" name="utilidad" value="poco-util" class="form-check-input">
+                        <label for="poco-util" class="form-check-label">Poco útil</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="nada-util" name="utilidad" value="nada-util" class="form-check-input">
+                        <label for="nada-util" class="form-check-label">Nada útil</label>
+                    </div>
+                </div>
+    
+                <div class="mb-4">
+                    <label for="comentarios" class="form-label">¿Tienes algún comentario o sugerencia?</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" class="form-control" placeholder="Escribe aquí tus comentarios..."></textarea>
+                </div>
+    
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+                </div>
+            </form>
+        </main>
+    
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p>&copy; 2024 Mi Página Web | <a href="#inicio" class="text-info">Volver al inicio</a></p>
+        </footer>
+    
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const elements = document.querySelectorAll(".hidden");
+        
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+        
+                elements.forEach(el => observer.observe(el));
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAs</title>
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="misestil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/milog.jpeg" alt="Logo" width="60" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="Index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="IAs.html"><i class="bi bi-info-circle"></i> IAs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Curio.html"><i class="bi bi-question-diamond"></i> Usos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Fuent.html"><i class="bi bi-question-circle"></i> Comentarios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <div class="container content mt-5 pt-5">
+        <section id="inicio" class=" text-center mb-5 hidden">
+            <h1 class="text-primary mb-3">Usos</h1>
+            <p class="lead">Ahora veremos demostraciones de algunos usos que se le pueden dar a la inteligencia artificial.</p>
+        </section>
+
+        <section id="voz" class="row g-4 hidden">
+            <!-- Primera Columna -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <h5 class="text-secondary">Descripción</h5>
+                    <p>Un muy usado tipo de inteligencia artificial, la cual seria el chat inteligente, un ejemplo ya lo hemos visto, claro que siempre va a haber cualquier otro tipo de chat, estos son capaces de ayudarte a programar, redactar o resolver problemas matematicos.</p>
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <p>Ahora se ve un ejemplo de una voz generada con inteligencia artificial, que ha decir verdad, se escucha bien.</p>
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <p>Este ahora es un ejemplo de una imagen que generó una inteligencia artificial. Consejo: trata de ser lo mas especifico en las instrucciones para una imagen mucho mas acertada a lo que son tus ideas, aunque puede que no le quede como querias</p>
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <p>El ejemplo dado aqui es sobre una inteligencia artificial que puede llegar a generar una cancion o de plano solo darte la instrumental</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <h5 class="text-secondary">Demostración</h5>
+                    <img src="img/esgif.gif" alt="Un GIF animado mostrando IA en acción" width="60%">
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <audio controls autoplay muted>
+                        <source src="img/audint.mp3" type="audio/mpeg">
+                        Tu navegador no soporta la etiqueta de audio.
+                      </audio>
+                      <p>Voz de Javier</p>
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <img src="img/godempt.jpeg" width="33.7%">
+                </div>
+                <div class="bg-light p-3 border rounded text-center shadow-sm">
+                    <audio controls autoplay muted>
+                        <source src="img/chiccan.mp3" type="audio/mpeg">
+                        Tu navegador no soporta la etiqueta de audio.
+                      </audio>
+                      <audio controls autoplay muted>
+                        <source src="img/largcan.mp3" type="audio/mpeg">
+                        Tu navegador no soporta la etiqueta de audio.
+                      </audio>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Mi Página Web | <a href="#inicio" class="text-info">Volver al inicio</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".hidden");
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

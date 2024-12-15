@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="misestil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="img/milog.jpeg" alt="Logo" width="60" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="IAs.html"><i class="bi bi-info-circle"></i> IAs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Curio.html"><i class="bi bi-question-diamond"></i> Usos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Fuent.html"><i class="bi bi-question-circle"></i> Comentarios</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container content mt-5 pt-5">
+    <section id="inicio" class="text-center mb-5 hidden">
+        <h1 class="text-primary mb-3">Inicio</h1>
+        <p class="lead">Explora diversos datos sobre las IA's...</p>
+        <nav>
+            <ul class="list-unstyled">
+                <li class="list-group-item"><a href="#sobre-mi" class="text-decoration-none text-primary">¿Qué es la IA?</a></li>
+                <li class="list-group-item"><a href="#histo" class="text-decoration-none text-primary">Un poco de historia</a></li>
+                <li class="list-group-item"><a href="#debfu" class="text-decoration-none text-primary">IA debil vs IA fuerte</a></li>
+                <li class="list-group-item"><a href="#usos" class="text-decoration-none text-primary">Usos que se les pueden dar</a></li>
+                <li class="list-group-item"><a href="#Elreemplazo" class="text-decoration-none text-primary">¿Nos reemplazarán?</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="sobre-mi" class="mb-5 hidden">
+        <h2><i class="bi bi-lightbulb"></i> ¿Qué es la IA?</h2>
+        <p>La inteligencia artificial (IA) busca que las máquinas realicen tareas que, tradicionalmente, requieren inteligencia humana. Esto incluye la toma de decisiones, aprendizaje y comprensión del lenguaje.</p>
+    </section>
+
+    <section id="histo" class="mb-5 hidden">
+        <h2><i class="bi bi-clock-history"></i> Un poco de historia</h2>
+        <p>Desde al menos el siglo I a.C., los humanos se han planteado la posibilidad de crear máquinas que imiten al cerebro humano. Ya en la época moderna, John McCarthy acuñó el término inteligencia artificial en 1955. En 1956, McCarthy y algunos otros organizaron una conferencia denominada «Dartmouth Summer Research Project on Artificial Intelligence». Este encuentro dio lugar a la creación del aprendizaje automático, el aprendizaje profundo, el análisis predictivo y, ahora, el análisis prescriptivo. También dio lugar a un campo de estudio totalmente nuevo: la ciencia de los datos.</p>
+    </section>
+
+    <section id="debfu" class="mb-5 hidden">
+        <h2><i class="bi bi-lightning-charge"></i>IA debil vs IA fuerte</h2>
+        <p>La IA débil, también conocida como IA estrecha, se refiere a sistemas de inteligencia artificial diseñados y entrenados para realizar tareas específicas sin la conciencia de sí mismos. Este tipo de IA es el más común en la actualidad y puede encontrarse en aplicaciones como asistentes virtuales, sistemas de recomendación y software de reconocimiento de voz e imagen.</p>
+        <p>La IA fuerte, también conocida como inteligencia artificial general (AGI), es teóricamente capaz de comprender, aprender o aplicar la inteligencia de manera similar a un ser humano. A diferencia de la IA débil, la IA fuerte puede realizar cualquier tarea cognitiva con la misma eficiencia que un humano. Sin embargo, este tipo de IA aún se encuentra en etapas teóricas y de investigación.</p>
+    </section>
+    <section id="usos" class="mb-5 hidden">
+        <h2><i class="bi bi-tools"></i> Usos de la IA</h2>
+        <p>Las inteligencias artificiales tienen aplicaciones en múltiples áreas, desde generación de texto y creación de imágenes hasta desarrollo de modelos predictivos para análisis de datos.</p>
+    </section>
+
+    <section id="Elreemplazo" class="mb-5 hidden">
+        <h2><i class="bi bi-exclamation-circle"></i> ¿Nos reemplazará la IA?</h2>
+        <p class="justificado">Siendo sinceros, la IA es una herramienta muy util a la hora de ahorrarnos tiempo, pero existen ciertos aspectos en los que por el momento una IA no nos podria superar y eso no es nada rentable para las empresas, que son las que en realidad reemplazan a las personas pero bueno es suficiente de charla filosofica.</p>
+        <p class="justificado">Claro que el futuro no esta asegurado y eso significa que no hay que teorizar sobre algun futuro distopico en el cual alguna IA sea nuestro verdugo, aunque existen muchas posibilidades</p>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-3 mt-5 hidden">
+    <p>&copy; 2024 Mi Página Web | <a href="#inicio" class="text-info">Volver al inicio</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".hidden");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
+</body>
+</html>
